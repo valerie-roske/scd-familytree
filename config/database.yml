@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: 127.0.0.1
+  username: postgres
+  password: microwave
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: scd-development
+
+test:
+  <<: *default
+  database: scd-test
+
+production:
+  <<: *default
+  database: scd-production

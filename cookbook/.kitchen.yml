@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 2048
+  synced_folders:
+    - ["../", "/home/vagrant/workspace"]
+  network:
+    - ["forwarded_port", {guest: 3000, host: 4001}]
+    - ["forwarded_port", {guest: 9292, host: 5001}]
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: scd-kitchen-box
+    driver:
+      box: ubuntu/trusty64
+
+suites:
+  - name: scd-chef
+    run_list: 
+      - scd-chef
