@@ -1,0 +1,20 @@
+<h1>Listing all People</h1>
+
+<%= link_to('Create new person', new_person_path) %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @people.each do |person| %>
+    <tr>
+      <td>
+        <%= person.full_name %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<h1>New Person</h1>
+
+<%= link_to('See all people', people_path) %>
+
+<%= form_for @person do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :pledge_name %><br>
+    <%= f.text_field :pledge_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p> 
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
