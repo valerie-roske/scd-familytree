@@ -1,0 +1,24 @@
+<h1>New Pledge Class</h1>
+
+<%= link_to('See all pledge classes', pledge_classes_path) %>
+
+<%= form_for @pledge_class do |f| %>
+  <p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  </p>
+
+  <p>
+  <%= f.label :semester %><br>
+  <%= f.text_field :semester %>
+  </p>
+
+  <p>
+  <%= f.label :year %><br>
+  <%= f.text_field :year %>
+  </p>
+
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
